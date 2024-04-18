@@ -1,0 +1,9 @@
+.container {
+    margin-top: 80px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 60vh - 80px);
+  }

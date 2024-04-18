@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About us</title>
+    <meta name="description" content="Flipbook  " />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      type="text/javascript"
+      src="flipbook/extras/jquery.min.1.7.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="flipbook/extras/jquery-ui-1.8.20.full.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="flipbook/extras/modernizr.2.5.3.min.js"
+    ></script>
+    <script type="text/javascript" src="flipbook/lib/hash.js"></script>
+    <script type="text/javascript">
+      var flipbookcfg = {
+        url: ".\/data\/",
+        cover: 0,
+        numPages: 3,
+        textTip:
+          "Press ESC to exit. Use the keyboard arrows to change the page.",
+        showSlider: "null",
+        showSocial: "null",
+        showformat: "1",
+        showDownload: "null",
+        direction: "ltr",
+        flipsound: "null",
+        widthimg: "1488",
+        heightimg: "2105",
+      };
+    </script>
+    <style>
+      body {
+        overflow-y: scroll;
+      }
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+
+      @media only screen and (max-width: 750px) {
+        .flipbook-title {
+          display: none !important;
+        }
+        .zoom-icon {
+          display: none;
+        }
+
+        .controls-pdf {
+          right: 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="audio" src="flipbook/pics/page-flip.mp3"></audio>
+    <div id="canvas">
+
+      <div class="controls-pdf">
+        <div class="controlzoom" style="display: none">
+          <a
+            href="#"
+            id="zoomin"
+            style="
+              font-size: 16px;
+              color: #808080;
+              text-decoration: none;
+              font-weight: bold;
+            "
+            ><img src="flipbook/pics/zoomin.png"
+          /></a>
+          <a
+            href="#"
+            id="zoomout"
+            style="
+              font-size: 16px;
+              color: #808080;
+              text-decoration: none;
+              font-weight: bold;
+            "
+            ><img src="flipbook/pics/zoomout.png"
+          /></a>
+        </div>
+
+        <a
+          href="./PDF/f17f8b90db961d06becfaf0e8096a78cc08d49d6202403.pdf"
+          target="_blank"
+          ><img style="display: none" src="flipbook/pics/down-pdf.png"
+        /></a>
+        <div class="zoom-icon zoom-icon-in"></div>
+        <a href="#" id="prev"></a>
+        <a href="#" id="next"></a>
+      </div>
+
+      <div class="magazine-viewport" id="flipfull">
+        <div class="container">
+          <div class="magazine">
+            <div ignore="1" class="next-button"></div>
+            <div ignore="1" class="previous-button"></div>
+          </div>
+        </div>
+        <!-- <div class="bottom">
+          <div id="slider-bar" class="turnjs-slider">
+            <div id="slider"></div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script type="text/javascript" src="flipbook/js/core.js"></script>
+    <script type="text/javascript">
+      yepnope({
+        test: Modernizr.csstransforms,
+        yep: ["flipbook/lib/turn.min.js"],
+        nope: [
+          "flipbook/lib/turn.html4.min.js",
+          "flipbook/css/jquery.ui.html4.css",
+        ],
+        both: [
+          "flipbook/lib/zoom.min.js",
+          "flipbook/css/jquery.ui.css",
+          "flipbook/js/magazineoff.js",
+          "flipbook/css/magazine.css",
+        ],
+        complete: loadApp,
+      });
+    </script>
+  </body>
+</html>

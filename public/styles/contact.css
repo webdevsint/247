@@ -1,0 +1,105 @@
+.container {
+  padding-bottom: 2rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgb(254, 254, 254) 0%,
+    rgb(255, 56, 69) 100%
+  );
+}
+
+.card {
+  padding: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card a:hover {
+  color: #e80414;
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-inline: 2rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card,
+form {
+  background: hsla(0, 0%, 95%, 0.644);
+  backdrop-filter: blur(1rem);
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+form button {
+  padding: 1rem;
+  text-transform: uppercase;
+  background: #f1f1f1;
+  text-align: center;
+  border: 1px solid #313131;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+input,
+select {
+  padding: 4px;
+  border-radius: 0;
+  border: 1px solid #313131;
+}
+
+input:focus {
+  transition: 0.1s;
+  border: 1px solid #e80414;
+}
+
+form button,
+input,
+select {
+  width: 100%;
+  outline: none;
+  background: #f1f1f1;
+}
+
+form button:hover {
+  background: #ef2c39;
+  color: white;
+}
+
+@media (max-width: 770px) {
+  main {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  form {
+    width: 100%;
+  }
+}
